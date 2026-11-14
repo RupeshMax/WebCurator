@@ -6,9 +6,10 @@ interface Props {
   onAdd: () => void
   onSelect: (site: Site) => void
   onVisit: (id: string) => void
+  onSignOut: () => void
 }
 
-export default function HomeScreen({ sites, onAdd, onSelect, onVisit }: Props) {
+export default function HomeScreen({ sites, onAdd, onSelect, onVisit, onSignOut }: Props) {
   const [search, setSearch] = useState('')
   const [view, setView] = useState<'grid' | 'list'>('grid')
 
@@ -25,6 +26,15 @@ export default function HomeScreen({ sites, onAdd, onSelect, onVisit }: Props) {
         <div className="flex items-center justify-between mb-3">
           <h1 className="text-xl font-bold text-white">WebCurator</h1>
           <div className="flex gap-2">
+            <button
+              onClick={onSignOut}
+              className="p-2 rounded-xl bg-[#1a1a24] text-gray-400"
+              title="Sign out"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+              </svg>
+            </button>
             <button
               onClick={() => setView(v => v === 'grid' ? 'list' : 'grid')}
               className="p-2 rounded-xl bg-[#1a1a24] text-gray-400"
