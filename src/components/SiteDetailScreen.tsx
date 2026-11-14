@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Site } from '../types'
+import type { Site } from '../types'
 
 interface Props {
   site: Site

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Site } from './types'
+import type { Site } from './types'
 import { useSites } from './store'
 import HomeScreen from './components/HomeScreen'
 import AddSiteScreen from './components/AddSiteScreen'

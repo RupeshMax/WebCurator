@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Site, Collection } from './types'
+import type { Site, Collection } from './types'
 
 const SITES_KEY = 'webcurator_sites'
 const COLLECTIONS_KEY = 'webcurator_collections'
